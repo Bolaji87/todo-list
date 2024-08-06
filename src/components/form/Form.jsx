@@ -1,13 +1,36 @@
-import React from "react";
+import React, { useState } from "react";
+import "./form.css";
 
 function Form() {
+  const [quantity, setQuantity] = useState("");
+  const [description, setDescription] = useState("");
+
+  function handleSSubmitForm(e) {
+    e.preventDefault();
+    if (!description) return;
+
+    setQuantity("");
+    setDescription("");
+  }
   return (
-    <div>
-      <form action="">
-        <select name="" id="">
-          <option value=""></option>
+    <div className="form-wrapper">
+      <form action="" onSubmit={handleSSubmitForm}>
+        <select
+          name=""
+          id=""
+          value={quantity}
+          onChange={(e) => setQuantity(Number(e.target.value))}
+        >
+          {Array.from({ length: 20 }, (_, i) => i + 1).map((num) => (
+            <option key={num}>{num}</option>
+          ))}
         </select>
-        <input type="text" />
+        <input
+          type="text"
+          placeholder="items..."
+          value={description}
+          onChange={(e) => setDescription(e.target.value)}
+        />
         <button>Add</button>
       </form>
     </div>
