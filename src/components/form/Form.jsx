@@ -1,13 +1,21 @@
 import React, { useState } from "react";
 import "./form.css";
 
-function Form() {
-  const [quantity, setQuantity] = useState("");
+function Form({ onUpdateItems }) {
+  const [quantity, setQuantity] = useState(1);
   const [description, setDescription] = useState("");
 
   function handleSSubmitForm(e) {
     e.preventDefault();
     if (!description) return;
+
+    const newItems = {
+      description,
+      quantity,
+      id: crypto.randomUUID(),
+    };
+
+    onUpdateItems(newItems);
 
     setQuantity("");
     setDescription("");

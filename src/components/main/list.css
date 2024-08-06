@@ -1,4 +1,24 @@
 .list-container {
   background-color: rgb(66, 66, 105);
   height: 28rem;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+}
+.list-container .list {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  padding: 10px;
+  list-style-type: none;
+  /* justify-content: center; */
+}
+.list-container .list-items {
+  display: flex;
+  gap: 20px;
+  font-size: 25px;
+}
+.list-items button {
+  height: 30px;
+  border-radius: 5px;
 }

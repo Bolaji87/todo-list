@@ -8,11 +8,16 @@ function App() {
   function handleUpadateItems(item) {
     setItems((items) => [...items, item]);
   }
+
+  function handleDeleteItems(id) {
+    setItems((items) => items.filter((item) => item.id !== id));
+  }
+
   return (
     <div>
       <Navbar />
       <Form onUpdateItems={handleUpadateItems} />
-      <Lists items={items} />
+      <Lists items={items} onDeleteItems={handleDeleteItems} />
     </div>
   );
 }
