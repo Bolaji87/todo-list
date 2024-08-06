@@ -1,9 +1,10 @@
 import React from "react";
+import "./list.css";
 
-function Lists() {
+function Lists({ items }) {
   return (
-    <div>
-      <h1>list</h1>
+    <div className="list-container">
+      <h1>{items}</h1>
     </div>
   );
 }

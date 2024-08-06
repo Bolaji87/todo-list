@@ -4,7 +4,7 @@ import "./navbar.css";
 function Navbar() {
   return (
     <div className="navbar">
-      <h1>My daiy routine</h1>
+      <h1>My daily routine</h1>
     </div>
   );
 }

@@ -44,6 +44,7 @@
   border: none;
   border-radius: 18px;
   font-size: 20px;
-  background-color: aquamarine;
-  color: aliceblue;
+  font-weight: bold;
+  background-color: rgb(39, 43, 41);
+  color: rgb(16, 139, 247);
 }
