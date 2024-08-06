@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import Navbar from "./components/header/Navbar.jsx";
 import Form from "./components/form/Form.jsx";
 import Lists from "./components/main/Lists.jsx";
+import Footer from "./components/footer/Footer.jsx";
 
 function App() {
   const [items, setItems] = useState([]);
@@ -18,6 +19,7 @@ function App() {
       <Navbar />
       <Form onUpdateItems={handleUpadateItems} />
       <Lists items={items} onDeleteItems={handleDeleteItems} />
+      <Footer />
     </div>
   );
 }
